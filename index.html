@@ -84,6 +84,7 @@ div.text {
 p {
   font-size: 14pt;
   line-height: 150%;
+  text-align: justify;
 }
 h2 {
   text-align: center;
@@ -101,35 +102,35 @@ div.polaroid {
   text-align: center;
   margin: 10px;
   margin-bottom: 20px;
+  padding: 2px;
 }
 img.polaroid {
   width: 100%;
-  height: auto;
+  max-height: 100px;
+  object-fit: contain;
 }
 p.polaroid {
   margin: 5px;
+  text-align: center;
 }
 
 #title-container {
   margin: auto;
   display: block;
   width: fit-content;
-  height: 100px;
-  margin-bottom: 70px;
-  
+  height: 150px;
 }
 #title-img {
   display: inline;
   float: left;
-  margin: auto;
-  height: 100%;
+  width: 150px;
 }
 #title-text {
   display: inline;
   float: left;
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-top: 30px;
   font-size: 300%;
-  line-height: 50px;
   font-family: "Oswald", sans-serif;
 }
 
@@ -162,8 +163,35 @@ h3.font-preview {
   margin: 2px;
 }
 
+div.color-preview-label {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  height: 20px;
+}
+div.color-preview {
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  height: 20px;
+}
+
+div.circle {
+  position: absolute; width: 50px; height: 50px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3); 
+}
+
 </style>
 <script>
+
+function jump(h){
+    var url = location.href;               //Save down the URL without hash.
+    location.href = "#"+h;                 //Go to the target element.
+    history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
+}
 
 </script>
 </head>
@@ -173,89 +201,140 @@ h3.font-preview {
 
 <div id="content">
   <div id="title-container">
-    <img id="title-img" src="Innovation-Hub-North-Little-Rock-2020-Logo.png">
+    <img id="title-img" src="logo_main.png" alt="Arkansas Regional Innovation Hub Logo">
     <h1 id="title-text">Official Style Guide</h1>
   </div>
   
+  <hr class="solid">
+  <!-- INTRODUCTION -->
   <h2>Introduction</h2>
   <div class="text">
     <p>
       The identity and integrity of the Arkansas Regional Innovation Hub is integral to our ability to attract, develop, and retain the many talented and creative individuals who make up our community. 
-      <br/>To that end, we provide this detailed style guide so that all official Hub materials reflect the professional, welcoming, and industrious space that we work so hard to create. 
-      Each section will cover a different aspect of our house style. 
-      You can jump to each section using the shortcuts below in the Table of Contents.
+      To that end, we provide this detailed style guide so that all official Hub materials reflect the professional, welcoming, and industrious space that we work so hard to create. 
+      The guidelines presented apply to all represenations of our brand in all of the following media:
     </p>
+    <ul>
+      <li>Advertising Materials</li>
+      <li>Website Design and Social Media Promotion</li>
+      <li>Graphic Design</li>
+      <li>Official Photography</li>
+      <li>Screen Printing</li>
+      <li>Other Print Media</li>
+    </ul>
   </div>
   
-
+  
   <hr class="solid">
+  <!-- TABLE OF CONTENTS -->
   <h2>Table of Contents</h2>
-
+  <p style="text-align: center;">Each section will cover a different aspect of our house style.<br/>You can jump to any section using the shortcuts below.</p>
+    
   <div id="toc">
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
-      <p class="polaroid">Terminology</p>
-    </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
-      <p class="polaroid">Typography</p>
-    </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
-      <p class="polaroid">Logo</p>
-    </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
-      <p class="polaroid">Color</p>
-    </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
+    <div class="polaroid" onclick="jump('voice');">
+      <img class="polaroid" src="voice.png" alt="Voice Shortcut Button">
       <p class="polaroid">Voice</p>
     </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
-      <p class="polaroid">Photos</p>
-    </div>
-    <div class="polaroid">
-      <img class="polaroid" src="DSC04052-scaled.jpg">
+    <div class="polaroid" onclick="jump('abbreviations');">
+      <img class="polaroid" src="abbreviation.png" alt="Abbreviations Shortcut Button">
       <p class="polaroid">Abbreviations</p>
+    </div>
+    <div class="polaroid" onclick="jump('terminology');">
+      <img class="polaroid" src="dictionary_icon.png" alt="Terminology Shortcut Button">
+      <p class="polaroid">Terminology</p>
+    </div>
+    <div class="polaroid" onclick="jump('typography');">
+      <img class="polaroid" src="typography_icon.png" alt="Typography Shortcut Button">
+      <p class="polaroid">Typography</p>
+    </div>
+    <div class="polaroid" onclick="jump('color');">
+      <img class="polaroid" src="colors.png" alt="Color Shortcut Button">
+      <p class="polaroid">Color</p>
+    </div>
+    <div class="polaroid" onclick="jump('logo');">
+      <img class="polaroid" src="logo_main.png" alt="Logo Shortcut Button">
+      <p class="polaroid">Logo</p>
+    </div>
+    <div class="polaroid" onclick="jump('photos');">
+      <img class="polaroid" src="photos.png" alt="Photos Shortcut Button">
+      <p class="polaroid">Photos</p>
     </div>
   </div>
 
   <hr class="solid">
-  <h2>Terminology</h2>
+  <!-- VOICE -->
+  <h2 id="voice">Voice</h2>
 
   <div class="text">
     <p>
-      Here at the Innovation Hub, we use some terms which not everyone may be familiar with. However, they are an important part of our vocabulary. These terms should be well understood when writing official materials for the Hub so that we maintain a consistent professional voice.
+      Official Innovation Hub materials should always maintian a professional tone and voice.
+      Always use inclusive and inviting language, and consider the specific audience of the materials in question.
+      Promotional materials should express the excitment and love of learning which drives our company mission. 
+      
+
+    </p>
+
+  </div> 
+
+  <hr class="solid">
+  <!-- ABBREVIATIONS -->
+  <h2 id="abbreviations">Abbreviations</h2>
+
+  <div class="text">
+    <p>
+      When referring to the Arkansas Regional Innovation Hub, you may abbreviate the company name to "The Innovation Hub" (as seen in our logo), or more informally as simply "The Hub".
+    </p>
+    <div style="margin: auto; width: fit-content; margin-top: 0px; margin-bottom: 0px;">
+      <img src="steam.png" alt="STEAM Education Graphic" style="height: 200px;">
+    </div>
+    <p>
+      STEAM is an abbreviation which stands for Science, Technology, Engineering, Art, and Math.
+      It is an extension of the acronym STEM which some people may be more familiar with.
+    </p>
+  </div> 
+
+  <hr class="solid">
+  <!-- TERMINOLOGY -->
+  <h2 id="terminology">Terminology</h2>
+
+  <div class="text">
+    <p>
+      Here at the Innovation Hub, we use some terms which not everyone may be familiar with. However, they are an important part of our vocabulary. 
+      These terms should be well understood when writing official materials for the Hub so that we maintain a consistent professional voice.
     </p>
   
     <h3>Makers & Maker Spaces</h3> 
     <p>
       A Maker is any person who is engaged in any of the wide variety of creative arts represented at the Hub. Some of these disciplines include:
     </p>
-      <ul>
-        <li>Ceramics</li>
-        <li>Screen Printing</li>
-        <li>Carpentry and Woodworking</li>
-        <li>Metalworking</li>
-        <li>Printmaking</li>
-        <li>Electronics Prototyping</li>
-      </ul>
+    <ul>
+      <li>Ceramics</li>
+      <li>Screen Printing</li>
+      <li>Carpentry and Woodworking</li>
+      <li>Metalworking</li>
+      <li>Printmaking</li>
+      <li>Electronics Prototyping</li>
+    </ul>
     <p>
-      Similarly, “Maker Spaces” serves as a generic term to encompass all of the various spaces in which makers operate. Additionally, it should be understood that these are cooperative, shared spaces in which mutual learning and growth are prioritized.
-      When speaking about the various spaces at the Hub generally, it is appropriate to use the terms “makers” and “maker spaces”, however when speaking about a more specific space, one should refer to that space by its intended function.
+      Similarly, “Maker Spaces” serves as a generic term to encompass all of the various spaces in which makers operate. 
+      Additionally, it should be understood that these are cooperative, shared spaces in which mutual learning and growth are prioritized.
+      When speaking about the various spaces at the Hub generally, it is appropriate to use the terms “makers” and “maker spaces”, 
+      however when speaking about a more specific space, one should refer to that space by its intended function.
     </p>
 
     <h3>STEAM</h3>
     <p>
-      STEAM is an acronym for Science, Technology, Engineering, Art, and Math. It is an extension of the acronym STEM which some people may be more familiar with. These subjects encompass the primary focal points of our many classes and workshops. This term is often used in connection with our educational programs and student outreach programs.
+      STEAM is an acronym for Science, Technology, Engineering, Art, and Math. 
+      These subjects encompass the primary focal points of our many classes and workshops. 
+      This term is often used in connection with our educational programs and student outreach programs.
+      Use this term when refering to the educational goals and benefits of Innovation Hub programs and classes.
     </p>
 
   </div>
 
   <hr class="solid">
-  <h2>Typography</h2>
+  <!-- TYPOGRAPHY -->
+  <h2 id="typography">Typography</h2>
 
   <div class="text">
     <p>
@@ -288,6 +367,159 @@ h3.font-preview {
     </p>
   </div>
   
+  <hr class="solid">
+  <!-- COLOR -->
+  <h2 id="color">Color</h2>
+
+  <div class="text">
+    
+    <h3>Our Colors</h3>
+
+    <p>
+      Our company colors are simple and timeless. 
+      Our primary theme colors are blue, and red is used as an accent color to draw the reader's attention to important elements.
+    </p>
+    
+    <div style="margin: 5px; width: 90%; height: 60px;">
+      <div class="circle" style="background-color: #3376B9;"></div>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 3px;">Dark Blue</p>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 25px; font-size: 10pt;">#3376B9</p>
+    </div>
+
+    <div style="margin: 5px; width: 90%; height: 60px; margin-left: 50px;">
+      <div class="circle" style="background-color: #3FB0ED;"></div>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 3px;">Light Blue</p>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 25px; font-size: 10pt;">#3FB0ED</p>
+    </div>
+
+    <div style="margin: 5px; width: 90%; height: 60px; margin-left: 100px;">
+      <div class="circle" style="background-color: #E42236;"></div>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 3px;">Red</p>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 25px; font-size: 10pt;">#E42236</p>
+    </div>
+
+    <div style="margin: 5px; width: 90%; height: 60px; margin-left: 150px;">
+      <div class="circle" style="background-color: #000000;"></div>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 3px;">Black</p>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 25px; font-size: 10pt;">#000000</p>
+    </div>
+
+    <div style="margin: 5px; width: 90%; height: 60px; margin-left: 200px;">
+      <div class="circle" style="background-color: #FFFFFF;"></div>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 3px;">White</p>
+      <p style="position: absolute; margin: 0px; margin-left: 60px; margin-top: 25px; font-size: 10pt;">#FFFFFF</p>
+    </div>
+
+    <h3>Color Usage</h3>
+    <p></p>
+    <div class="color-preview-label">
+      <p style="height: 100%; width: 30%; float: left; margin: 0px;">30%</p>
+      <p style="height: 100%; width: 25%; float: left; margin: 0px;">25%</p>
+      <p style="height: 100%; width: 20%; float: left; margin: 0px;">20%</p>
+      <p style="height: 100%; width: 15%; float: left; margin: 0px;">15%</p>
+      <p style="height: 100%; width: 10%; float: left; margin: 0px;">10%</p>
+    </div>
+    <div class="color-preview">
+      <div style="height: 100%; width: 30%; background-color: #FFFFFF; float: left;"></div>
+      <div style="height: 100%; width: 25%; background-color: #000000; float: left;"></div>
+      <div style="height: 100%; width: 20%; background-color: #3376b9; float: left;"></div>
+      <div style="height: 100%; width: 15%; background-color: #3fb0ed; float: left;"></div>
+      <div style="height: 100%; width: 10%; background-color: #e42236; float: left;"></div>
+    </div>
+
+    <p>
+      Color usage should roughly match these percentages. White should be used as the main background color. 
+      Text should be black so that it is easily visible against the white background. 
+      When a secondary background color is needed, use dark blue.
+      Red may be used for larger headings, and dark blue may be used for smaller headings. 
+      Light blue is appropriate for hyperlinks on the Hub website.
+      Text placed over blue and red backgrounds should be white, as it will provide a better contrast than black text.
+    </p>
+
+  </div>
+
+  <hr class="solid">
+  <!-- LOGO -->
+  <h2 id="logo">Logo</h2>
+
+  <div class="text">
+    <p>
+      The Hub logo is the most recognizable and iconic part of our brand, so its use should be treated with importance.
+      There are three versions of the logo which may be used in official Hub materials.
+    </p>
+
+    <h3>For Print and Online Materials</h3>
+    <div style="display: block; height: 110px; width: 100%;">
+      <img style="width: 100px; display: inline; float: left;" src="logo_main.png" alt="Main Logo">
+      <p style="display: inline; float: left; margin-top: 5px; margin-left: 20px; max-width: 450px;">This is the primary version of our logo, and it should be your go-to choice when representing the Hub in print and online.</p>
+    </div>
+
+    <h3>Our Logo, Simplified</h3>
+    <div style="display: block; height: 110px; width: 100%;">
+      <img style="width: 100px; display: inline; float: left;" src="logo_simple.png" alt="Simple Logo">
+      <p style="display: inline; float: left; margin-top: 5px; margin-left: 20px; max-width: 450px;">This simplified version of the logo should be used for more low-profile branding.</p>
+    </div>
+    
+    <h3>On Location</h3>
+    <div style="display: block; height: 110px; width: 100%;">
+      <img style="width: 100px; display: inline; float: left;" src="logo_secondary.png" alt="Secondary Logo">
+      <p style="display: inline; float: left; margin-top: 5px; margin-left: 20px; max-width: 450px;">A more detailed version of the logo is used for larger displays, such as those located on-location at the hub.</p>
+    </div>
+
+    <p>
+      Any of the forms of the logo may be used in a monochrome solid white or black variant in a situation where using the regular color scheme would clash with other visual elements. 
+      For example, if the logo is placed on top of an image with its own color scheme, one may opt to use a solid white logo so as not to disrupt the overall look.
+    </p>
+
+  </div>
+
+  <hr class="solid">
+  <!-- PHOTOS -->
+  <h2 id="photos">Photos</h2>
+
+  <div class="text">
+    <h3>General Usage</h3>
+    <div class="images" style="margin: auto; width: fit-content; display: flex; justify-content: space-evenly; flex-wrap: wrap; flex-direction: row;">
+      <img style="width: 45%;" src="production-header-01.png" alt="Positive Example Image">
+      <img style="width: 45%;" src="production-header-bad.png" alt="Negative Example Image">
+    </div>
+    <div class="images" style="margin: auto; width: 100%; display: flex; justify-content: space-evenly; flex-wrap: wrap; flex-direction: row;">
+      <p style="width: 45%; margin: 0px; text-align: center;">Good Example</p>
+      <p style="width: 45%; margin: 0px;  text-align: center;">Bad Example</p>
+    </div>
+    <p>
+      Images used in professional materials should always convey a welcoming and professional tone. 
+      Do not use images which are too dark, grainy, or otherwise difficult to see.
+      Always use images directly relevant to the suibject material. If no such resources are available, please contact the digital media and photography team to procure a suitable image.
+    </p>
+    
+    <h3>Promoting Classes and Workshops</h3> 
+    <div class="images" style="margin: auto; width: fit-content; display: flex; justify-content: space-evenly; flex-wrap: wrap; flex-direction: row;">
+      <img style="width: 45%;" src="12-1280x720.png" alt="Ceramic Ornaments Example Image">
+      <img style="width: 45%;" src="November-Classes-1-1280x720.png" alt="Pizza Peel Example Image">
+    </div>
+
+    <p>
+      Images used to promote classes and workshops should follow the same format as the images above.
+      When placing text over images, use a white text color with a faded background shadow effect. 
+      This will provide a subtle outline to the text which will make it easy to read against any background image.
+      These images should be watermarked using a solid-white version of the Hub logo in the bottom-right corner.
+    </p>
+
+  </div>
+
+  <hr class="solid">
+  <!-- CONCLUSION -->
+  <h2 id="conclusion">Conclusion</h2>
+
+  <div class="text">
+    <p>
+      We hope that this guide has been helpful in guiding your design decisions for official Innovation Hub media.
+      Please use this style guide as a reference sheet to refer back to whenever you have any doubts about your media's adherence to company policy.
+      If you have any further questions, please do not hesitate to contact the Media Team at media@arhub.org.
+    </p>
+
+  </div> 
 
 </div>
 
